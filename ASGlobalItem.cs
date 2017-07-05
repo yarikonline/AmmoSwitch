@@ -1,5 +1,4 @@
-﻿using Microsoft.Xna.Framework;
-using Terraria;
+﻿using Terraria;
 using Terraria.ModLoader;
 
 namespace AmmoSwitcher
@@ -11,13 +10,11 @@ namespace AmmoSwitcher
         public override void PickAmmo(Item item, Player player, ref int type, ref float speed, ref int damage, ref float knockback)
         {
             Item selectedAmmo = player.inventory[player.GetModPlayer<ASPlayer>(mod).useAmmoSlot];
-            // some ammo have different projectile, then fired from weapon, this must be preserved
-            
 
             // change projectule type to selected
-            if (selectedAmmo.ammo == item.ammo && player.HeldItem.shoot == 0)
+            if (selectedAmmo.ammo == player.HeldItem.useAmmo && selectedAmmo != item)
             {
-                type = player.inventory[player.GetModPlayer<ASPlayer>(mod).useAmmoSlot].shoot;
+                type = selectedAmmo.shoot;
             }
         }
 
