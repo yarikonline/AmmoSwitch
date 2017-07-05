@@ -9,4 +9,4 @@ If ammo in current slot isn't compitable with you current weapon, then usual rul
 Other feature of this mod - at first place weapons consume ammo from main inventory, not from ammo slots.
 
 Partialy compitable with other mods. Some bugs can appear with non-standart munition (or may not). Also if mod weapons or mod buffs have chance not to consume ammo - it won't work, 'cause all such vanilla things written manualy.
-Source included (I hope), so any help will be appreciated.
+Source included (I hope), so any help will be appreciated. yay
