@@ -7,7 +7,7 @@ using Terraria.ModLoader;
 
 namespace AmmoSwitcher
 {
-    class AmmoSwitcherPlayer : ModPlayer
+    class ASPlayer : ModPlayer
     {
         public int useAmmoSlot = 54; //ammo slots are 54 - 57 inventory slots (top to bottom)
 
