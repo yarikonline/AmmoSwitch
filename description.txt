@@ -1,9 +1,9 @@
 Mod is currently WIP. Feedback is heavily appreciated.
-
+1345
 Do you ever thought "Argh, it'd be nice to quickly switch ammo!"? No? ok...
 But if you do, then this is your choice! Ammo Switch gives you ability to manualy choose, what ammo slot use for shooting. Make your keybinds and switch ammo as you wish!
 If ammo in current slot isn't compitable with you current weapon, then usual rules applied.
 Other feature of this mod - at first place weapons consume ammo from main inventory, not from ammo slots.
 
 Partialy compitable with other mods. Some bugs can appear with non-standart munition (or may not). Also if mod weapons or mod buffs have chance not to consume ammo - it won't work, 'cause all such vanilla things written manualy.
-Source included (I hope), so any help will be appreciated. yay
+Source included (I hope), so any help will be appreciated.
