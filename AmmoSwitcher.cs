@@ -13,8 +13,9 @@ namespace AmmoSwitcher
         public static ModHotKey useAmmo2;
         public static ModHotKey useAmmo3;
         public static ModHotKey useAmmo4;
-
-        public UserInterface ammoInfo;
+        
+        public UserInterface ammoUI;
+        public ASUI ammoInfo;
 
         // TODO: it would be nice to have a litlle UI to see available ammo, w/o opening inventory
 
@@ -38,14 +39,32 @@ namespace AmmoSwitcher
 
             if (!Main.dedServ)
             {
-                ammoInfo = new UserInterface();
+                ammoUI = new UserInterface();
+                ammoInfo = new ASUI();
+                //ASUI.visible = true;
+                ammoUI.SetState(ammoInfo);
             }
         }
 
         public override void ModifyInterfaceLayers(List<GameInterfaceLayer> layers)
         {
-            layers.Add(new GameInterfaceLayer("AmmoSwitcher: Ammo Info", InterfaceScaleType.UI));
+            int hotbarLayer = layers.FindIndex(layer => layer.Name.Equals("Vanilla: Hotbar"));
+            if (hotbarLayer != -1)
+            {
+                layers.Insert(hotbarLayer, new LegacyGameInterfaceLayer("AmmoSwitcher: Ammo Info",
+                    delegate
+                    {
+                        if (ASUI.visible)
+                        {
+                            ammoUI.Update(Main._drawInterfaceGameTime);
+                            ammoInfo.Draw(Main.spriteBatch);
+                        }
+                        return true;
+                    }
+                    , InterfaceScaleType.UI));
+            }
         }
+        
 
     }
 }
