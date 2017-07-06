@@ -5,6 +5,8 @@ using Terraria.ID;
 using Terraria.GameInput;
 using Terraria.ModLoader;
 
+using AmmoSwitcher.UI;
+
 namespace AmmoSwitcher
 {
     class ASPlayer : ModPlayer
@@ -14,49 +16,51 @@ namespace AmmoSwitcher
         // switching slot and displaying message
         public override void ProcessTriggers(TriggersSet triggersSet)
         {
-            Color selectedSlot = new Color(200, 200, 50);
-            Color otherSlot = new Color(0, 0, 0, 150);
-
+            //Color selectedSlot = new Color(200, 200, 50);
+            //Color otherSlot = new Color(0, 0, 0, 150);
+            
             if (AmmoSwitcher.useAmmo1.JustPressed)
             {
                 useAmmoSlot = 54;
-                ((AmmoSwitcher)mod).ammoInfo.slot1.BorderColor = selectedSlot;
+                if (ASUI.visible) Main.PlaySound(SoundID.MenuTick);
+              /*  ((AmmoSwitcher)mod).ammoInfo.slot1.BorderColor = selectedSlot;
                 ((AmmoSwitcher)mod).ammoInfo.slot2.BorderColor = otherSlot;
                 ((AmmoSwitcher)mod).ammoInfo.slot3.BorderColor = otherSlot;
-                ((AmmoSwitcher)mod).ammoInfo.slot4.BorderColor = otherSlot;
+                ((AmmoSwitcher)mod).ammoInfo.slot4.BorderColor = otherSlot;*/
             }
 
             if (AmmoSwitcher.useAmmo2.JustPressed)
             {
                 useAmmoSlot = 55;
-                ((AmmoSwitcher)mod).ammoInfo.slot1.BorderColor = otherSlot;
-                ((AmmoSwitcher)mod).ammoInfo.slot2.BorderColor = selectedSlot;
-                ((AmmoSwitcher)mod).ammoInfo.slot3.BorderColor = otherSlot;
-                ((AmmoSwitcher)mod).ammoInfo.slot4.BorderColor = otherSlot;
+                if (ASUI.visible) Main.PlaySound(SoundID.MenuTick);
+                /*    ((AmmoSwitcher)mod).ammoInfo.slot1.BorderColor = otherSlot;
+                    ((AmmoSwitcher)mod).ammoInfo.slot2.BorderColor = selectedSlot;
+                    ((AmmoSwitcher)mod).ammoInfo.slot3.BorderColor = otherSlot;
+                    ((AmmoSwitcher)mod).ammoInfo.slot4.BorderColor = otherSlot;*/
             }
 
             if (AmmoSwitcher.useAmmo3.JustPressed)
             {
                 useAmmoSlot = 56;
-                ((AmmoSwitcher)mod).ammoInfo.slot1.BorderColor = otherSlot;
-                ((AmmoSwitcher)mod).ammoInfo.slot2.BorderColor = otherSlot;
-                ((AmmoSwitcher)mod).ammoInfo.slot3.BorderColor = selectedSlot;
-                ((AmmoSwitcher)mod).ammoInfo.slot4.BorderColor = otherSlot;
+                if (ASUI.visible) Main.PlaySound(SoundID.MenuTick);
+                /*    ((AmmoSwitcher)mod).ammoInfo.slot1.BorderColor = otherSlot;
+                    ((AmmoSwitcher)mod).ammoInfo.slot2.BorderColor = otherSlot;
+                    ((AmmoSwitcher)mod).ammoInfo.slot3.BorderColor = selectedSlot;
+                    ((AmmoSwitcher)mod).ammoInfo.slot4.BorderColor = otherSlot;*/
             }
 
             if (AmmoSwitcher.useAmmo4.JustPressed)
             {
                 useAmmoSlot = 57;
-                ((AmmoSwitcher)mod).ammoInfo.slot1.BorderColor = otherSlot;
-                ((AmmoSwitcher)mod).ammoInfo.slot2.BorderColor = otherSlot;
-                ((AmmoSwitcher)mod).ammoInfo.slot3.BorderColor = otherSlot;
-                ((AmmoSwitcher)mod).ammoInfo.slot4.BorderColor = selectedSlot;
+                if (ASUI.visible) Main.PlaySound(SoundID.MenuTick);
+                /*    ((AmmoSwitcher)mod).ammoInfo.slot1.BorderColor = otherSlot;
+                    ((AmmoSwitcher)mod).ammoInfo.slot2.BorderColor = otherSlot;
+                    ((AmmoSwitcher)mod).ammoInfo.slot3.BorderColor = otherSlot;
+                    ((AmmoSwitcher)mod).ammoInfo.slot4.BorderColor = selectedSlot;*/
             }
-
-            if (player.HeldItem.useAmmo > 0 && !Main.playerInventory)
-            {
-                if (player.HeldItem.type != ItemID.FlareGun) ASUI.visible = true;
-            }
+            
+            ASUI.activeSlot = useAmmoSlot;
+            if (player.HeldItem.useAmmo > 0 && !Main.playerInventory) ASUI.visible = true;
             else ASUI.visible = false;
         }
         

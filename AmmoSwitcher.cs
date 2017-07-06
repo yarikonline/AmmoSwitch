@@ -4,6 +4,8 @@ using Terraria.ModLoader;
 using Terraria.UI;
 using Terraria;
 
+using AmmoSwitcher.UI;
+
 namespace AmmoSwitcher
 {
 	class AmmoSwitcher : Mod
@@ -41,7 +43,6 @@ namespace AmmoSwitcher
             {
                 ammoUI = new UserInterface();
                 ammoInfo = new ASUI();
-                //ASUI.visible = true;
                 ammoUI.SetState(ammoInfo);
             }
         }

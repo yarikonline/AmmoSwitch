@@ -2,9 +2,9 @@ Mod is currently WIP. Feedback is heavily appreciated.
 
 Latest update (v0.30):
 - Added UI, so you can now see, what ammo types you have, and which one you are using
+-- Also show total amount of each ammo type
 -- UI shown when player holds weapon that uses ammo
 -- UI hidden when inventory is open
--- If player auto-selecting Flare Gun, UI's visibility doesn't change
 - Removed messages about switching ammo type
 
 Do you ever thought "Argh, it'd be nice to quickly switch ammo!"? No? ok...
