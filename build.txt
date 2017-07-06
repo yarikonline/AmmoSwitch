@@ -1,5 +1,5 @@
 author = 9IP
-version = 0.20
+version = 0.30
 displayName = Ammo Switcher
 homepage = https://forums.terraria.org/index.php?threads/ammo-switch.59483/
 hideCode = false
