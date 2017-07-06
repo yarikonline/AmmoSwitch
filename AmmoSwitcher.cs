@@ -19,8 +19,6 @@ namespace AmmoSwitcher
         public UserInterface ammoUI;
         public ASUI ammoInfo;
 
-        // TODO: it would be nice to have a litlle UI to see available ammo, w/o opening inventory
-
 		public AmmoSwitcher()
 		{
 			Properties = new ModProperties()
