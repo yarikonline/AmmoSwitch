@@ -1,16 +1,13 @@
-Mod is currently WIP. Feedback is heavily appreciated.
-
-Latest update (v0.30):
-- Added UI, so you can now see, what ammo types you have, and which one you are using
--- Also show total amount of each ammo type
--- UI shown when player holds weapon that uses ammo
--- UI hidden when inventory is open
-- Removed messages about switching ammo type
+Ammo Switch v1.0
 
 Do you ever thought "Argh, it'd be nice to quickly switch ammo!"? No? ok...
 But if you do, then this is your choice! Ammo Switch gives you ability to manualy choose, what ammo slot use for shooting. Make your keybinds and switch ammo as you wish!
-If ammo in current slot isn't compitable with you current weapon, then usual rules applied.
-Other feature of this mod - at first place weapons consume ammo from main inventory, not from ammo slots.
 
-Partialy compitable with other mods. Some bugs can appear with non-standart munition (or may not). Also if mod weapons or mod buffs have chance not to consume ammo - it won't work, 'cause all such vanilla things written manualy.
-Source included (I hope), so any help will be appreciated.
+So, what this mod can do?
+Main feature: Allows you to switch ammo type on fly, without opening inventory.
+Additional features:
+- UI - shows what ammo types in your ammo slots, their total amount and which is currently active.
+- Consumption priority - now take ammo of choosen type from basic inventory, then from ammo slots.
+- If selected ammo type can't be used with weapon, then usual rules for ammo type apply.
+- Multiplayer compitable
+- Other mod should be compitable

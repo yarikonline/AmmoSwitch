@@ -1,10 +1,10 @@
 author = 9IP
-version = 0.30
+version = 1.0
 displayName = Ammo Switcher
 homepage = https://forums.terraria.org/index.php?threads/ammo-switch.59483/
-hideCode = false
+hideCode = true
 hideResources = true
-includeSource = true
+includeSource = false
 buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*
 includePDB = true
 side = NoSync
