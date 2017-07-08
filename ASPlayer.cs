@@ -41,8 +41,11 @@ namespace AmmoSwitcher
             }
             
             ASUI.activeSlot = useAmmoSlot;
-            if (player.HeldItem.useAmmo > 0 && !Main.playerInventory) ASUI.visible = true;
-            else ASUI.visible = false;
+            if (!triggersSet.SmartSelect)
+            {
+                if (player.HeldItem.useAmmo > 0 && !Main.playerInventory) ASUI.visible = true;
+                else ASUI.visible = false;
+            }
         }
         
         // consuming right item, priority to topleft corner of inventory

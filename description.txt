@@ -1,4 +1,7 @@
-Ammo Switch v1.0
+Ammo Switch v1.0.1
+
+Latesr update (v1.0.1):
+- Now holding "Auto select" button will not change visibility of ammo panel
 
 Do you ever thought "Argh, it'd be nice to quickly switch ammo!"? No? ok...
 But if you do, then this is your choice! Ammo Switch gives you ability to manualy choose, what ammo slot use for shooting. Make your keybinds and switch ammo as you wish!
